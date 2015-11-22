@@ -14,5 +14,3 @@ if __name__ == '__main__':
         ifce_computer_enginner.load(graph)
 
     grahdraw.draw(graph)
-
-    # todo: fazer um arquivo para traduzir um txt e gerar o course grid

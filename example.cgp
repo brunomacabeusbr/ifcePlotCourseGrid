@@ -1,0 +1,26 @@
+[1] Matemática Discreta
+[1] Lógica De Programação I
+[1] Eletronica Digital
+[1] Calculo I
+
+[2] Lógica Matemática
+[2] Eletronica Analógica
+[2] Física I
+Lógica De Programação I > [2] Lógica De Programação Ii
+Calculo I > [2] Cálculo Ii
+
+Matemática Discreta + Lógica Matemática > [3] Introdução A Análise De Algorítimos
+Lógica De Programação Ii > [3] Estrutura De Dados
+Eletronica Digital > [3] Arquitetura De Computadores
+Cálculo Ii > [3] Equações Diferenciais
+Calculo I + Física I > [3] Física Ii
+
+Introdução A Análise De Algorítimos > [4] Aspectos Teóricos Da Computação
+Estrutura De Dados > [4] Pesquisa E Ordenação
+Estrutura De Dados > [4] Paradígmas Da Programação
+Arquitetura De Computadores > [4] Microcontroladores E Miroprocessadores
+[4] Metodologia Científica E Tecnologica
+
+[5] Rede De Computadores E Comunicação De Dados
+[5] Sistemas Operacionais I
+[5] Probabilidade E Estatística
