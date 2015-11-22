@@ -19,8 +19,11 @@ def draw(graph):
             )
             x += 1
 
-    semesters = {1: [], 2: [], 3: [], 4: [], 5: []}
+    semesters = {}
     for i in graph.nodes():
+        if i.semester not in semesters:
+            semesters[i.semester] = []
+
         semesters[i.semester].append(i)
 
     for k, v in semesters.items():
@@ -49,11 +52,8 @@ def draw(graph):
     # Desenhar círculos dos semestres
     fig = plt.gcf()
 
-    fig.gca().add_artist(plt.Circle((0, 0), 1.5, color='green', fill=False, alpha=0.25))
-    fig.gca().add_artist(plt.Circle((0, 0), 2.5, color='green', fill=False, alpha=0.25))
-    fig.gca().add_artist(plt.Circle((0, 0), 3.5, color='green', fill=False, alpha=0.25))
-    fig.gca().add_artist(plt.Circle((0, 0), 4.5, color='green', fill=False, alpha=0.25))
-    fig.gca().add_artist(plt.Circle((0, 0), 5.5, color='green', fill=False, alpha=0.25))
-
+    for i in semesters.keys():
+        fig.gca().add_artist(plt.Circle((0, 0), i + 0.5, color='green', fill=False, alpha=0.25))
+    
     # Exibir
     plt.show()
