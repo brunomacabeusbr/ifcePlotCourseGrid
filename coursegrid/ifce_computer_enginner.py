@@ -1,0 +1,71 @@
+from discipline import Discipline
+
+
+def load(graph):
+    # 1
+    md = Discipline('Matemática Discreta', 1)
+    lp1 = Discipline('Lógica De Programação I', 1)
+    ed = Discipline('Eletronica Digital', 1)
+    c1 = Discipline('Calculo I', 1)
+    graph.add_node(lp1)
+    graph.add_node(md)
+    graph.add_node(ed)
+    graph.add_node(c1)
+
+    # 2
+    lm = Discipline('Lógica Matemática', 2)
+    lp2 = Discipline('Lógica De Programação Ii', 2)
+    ea = Discipline('Eletronica Analógica', 2)
+    c2 = Discipline('Cálculo Ii', 2)
+    f1 = Discipline('Física I', 2)
+    graph.add_node(lm)
+    graph.add_node(lp2)
+    graph.add_node(ea)
+    graph.add_node(c2)
+    graph.add_node(f1)
+    graph.add_edge(lp1, lp2)
+    graph.add_edge(c1, c2)
+
+    # 3
+    iaa = Discipline('Introdução A Análise De Algorítimos', 3)
+    eda = Discipline('Estrutura De Dados', 3)
+    ac = Discipline('Arquitetura De Computadores', 3)
+    edi = Discipline('Equações Diferenciais', 3)
+    f2 = Discipline('Física Ii', 3)
+    graph.add_node(iaa)
+    graph.add_node(eda)
+    graph.add_node(ac)
+    graph.add_node(edi)
+    graph.add_node(f2)
+    graph.add_edge(md, iaa)
+    graph.add_edge(lm, iaa)
+    graph.add_edge(lp2, ed)
+    graph.add_edge(ed, ac)
+    graph.add_edge(c2, ed)
+    graph.add_edge(c1, f2)
+    graph.add_edge(f1, f2)
+
+    # 4
+    atc = Discipline('Aspectos Teóricos Da Computação', 4)
+    po = Discipline('Pesquisa E Ordenação', 4)
+    pp = Discipline('Paradígmas Da Programação', 4)
+    mm = Discipline('Microcontroladores E Miroprocessadores', 4)
+    mct = Discipline('Metodologia Científica E Tecnologica', 4)
+    graph.add_node(atc)
+    graph.add_node(po)
+    graph.add_node(pp)
+    graph.add_node(mm)
+    graph.add_node(mct)
+    graph.add_edge(iaa, atc)
+    graph.add_edge(eda, po)
+    graph.add_edge(eda, pp)
+    graph.add_edge(ac, mm)
+    graph.add_edge(ea, mm)
+
+    # ?
+    rccd = Discipline('Rede De Computadores E Comunicação De Dados', 5)
+    so1 = Discipline('Sistemas Operacionais I', 5)
+    pe = Discipline('Probabilidade E Estatística', 5)
+    graph.add_node(rccd)
+    graph.add_node(so1)
+    graph.add_node(pe)
